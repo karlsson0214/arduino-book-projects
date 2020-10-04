@@ -1,8 +1,8 @@
 // konstanter som inte kan ändra värde
 // digital output pin nummer som LED kopplas till
 const int greenLEDPin = 9;
-const int redLEDPin = 11;
-const int blueLEDPin = 10;
+const int redLEDPin = 10; // fel nummer i boken
+const int blueLEDPin = 11; // fel nummer i boken
 
 // analog input pin som fotoresistorerna kopplas till
 const int redSensorPin = A0;
@@ -14,7 +14,6 @@ const int blueSensorPin = A2;
 int redLEDValue = 0; 
 int greenLEDValue = 0;
 int blueLEDValue = 0;
-
 // variabler för avlästa värden från de tre 
 // fotoresistorerna
 int redSensorValue = 0;
@@ -49,6 +48,8 @@ void loop() {
   Serial.print(greenSensorValue);
   Serial.print("\t Blue: ");
   Serial.print(blueSensorValue);
+  // ny rad
+  Serial.print("\n");
 
   // beräkna värden till LED
   // 0 - 1023 mappas till intervallet 0 - 255
@@ -63,9 +64,15 @@ void loop() {
   Serial.print(greenLEDValue);
   Serial.print("\t Blue: ");
   Serial.print(blueLEDValue);
+  // ny rad
+  Serial.print("\n");
 
   // skicka beräknade värden till LED
   analogWrite(redLEDPin, redLEDValue);
   analogWrite(greenLEDPin, greenLEDValue);
   analogWrite(blueLEDPin, blueLEDValue);
+  
+  // paus för att mängden utskrifter ska begränsas
+  // gör att det blir lättare att läsa 
+  delay(500);
 }
