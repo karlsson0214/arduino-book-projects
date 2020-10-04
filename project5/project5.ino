@@ -19,6 +19,7 @@ void setup() {
 
 // koden i loop körs om och om igen
 void loop() {
+  // läs potentiometerns värde
   // möjliga värden med analogRead är 0 - 1023
   potentiometerValue = analogRead(potentiometerPin);
   Serial.print("potentiometer value: ");
