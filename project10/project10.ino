@@ -71,16 +71,12 @@ void loop() {
   if (motorDirection == 1)
   {
     // motor "framåt"
-    // VARNING minst en måste vara LOW
-    // annars blir det kortslutning i L293D
     digitalWrite(controlPinToIC7, HIGH);
     digitalWrite(controlPinToIC2, LOW);
   }
   else
   {
     // motor "bakåt"
-    // VARNING minst en måste vara LOW
-    // annars blir det kortslutning i L293D
     digitalWrite(controlPinToIC7, LOW);
     digitalWrite(controlPinToIC2, HIGH);
   }
