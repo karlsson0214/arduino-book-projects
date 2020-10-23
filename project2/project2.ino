@@ -12,7 +12,7 @@ void setup()
     pinMode(4, OUTPUT); 
     // digitalt stift 5 är output för röd LED
     pinMode(5, OUTPUT); 
-    pinMode(1, INPUT);
+    pinMode(2, INPUT);
 }
 
 // kod som körs om och om igen
