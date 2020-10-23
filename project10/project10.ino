@@ -5,8 +5,8 @@
 // http://www.robotplatform.com/howto/L293/motor_driver_1.html
 /////////////////////////////
 // för styrnina av motor framåt och bakåt
-const int controlPin1 = 2;
-const int controlPin2 = 3;
+const int controlPinToIC7 = 2;
+const int controlPinToIC2 = 3;
 // för styrning av motor av och på
 const int enablePin = 9;
 
@@ -39,8 +39,8 @@ int motorDirection = 1;
 void setup() {
   pinMode(directionSwitchPin, INPUT);
   pinMode(onOffSwithStateSwitchPin, INPUT);
-  pinMode(controlPin1, OUTPUT);
-  pinMode(controlPin2, OUTPUT);
+  pinMode(controlPinToIC7, OUTPUT);
+  pinMode(controlPinToIC2, OUTPUT);
   pinMode(enablePin, OUTPUT);
   digitalWrite(enablePin, LOW);
 }
@@ -73,16 +73,16 @@ void loop() {
     // motor "framåt"
     // VARNING minst en måste vara LOW
     // annars blir det kortslutning i L293D
-    digitalWrite(controlPin1, HIGH);
-    digitalWrite(controlPin2, LOW);
+    digitalWrite(controlPinToIC7, HIGH);
+    digitalWrite(controlPinToIC2, LOW);
   }
   else
   {
     // motor "bakåt"
     // VARNING minst en måste vara LOW
     // annars blir det kortslutning i L293D
-    digitalWrite(controlPin1, LOW);
-    digitalWrite(controlPin2, HIGH);
+    digitalWrite(controlPinToIC7, LOW);
+    digitalWrite(controlPinToIC2, HIGH);
   }
   if (motorEnabled == 1)
   {
