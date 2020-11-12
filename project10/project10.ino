@@ -2,6 +2,7 @@
 /////////////////////////
 // för styrning av H-brygga - L293D
 // https://sv.wikipedia.org/wiki/H-brygga
+// https://www.engineersgarage.com/stm32/l293d-pin-description-and-working/
 // http://www.robotplatform.com/howto/L293/motor_driver_1.html
 /////////////////////////////
 // för styrnina av motor framåt och bakåt
@@ -31,7 +32,7 @@ int previousDirectionSwitchState = 0;
 int motorEnabled = 0;
 // motorns börvärde - önskad hastighet: 0 - 255
 int motorSpeed = 0;
-// motorns rotationsrikting (1) "framåt" och (0) "bakåt"
+// motorns rotationsrikting (1) moturs och (0) medurs
 // styrs av nedre knappen
 int motorDirection = 1;
 
@@ -70,13 +71,13 @@ void loop() {
   
   if (motorDirection == 1)
   {
-    // motor "framåt"
+    // motor roterar moturs
     digitalWrite(controlPinToIC7, HIGH);
     digitalWrite(controlPinToIC2, LOW);
   }
   else
   {
-    // motor "bakåt"
+    // motor roterar medurs
     digitalWrite(controlPinToIC7, LOW);
     digitalWrite(controlPinToIC2, HIGH);
   }
