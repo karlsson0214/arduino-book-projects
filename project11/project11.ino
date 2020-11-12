@@ -76,4 +76,5 @@ void loop() {
       lcd.print("No");
     }
   }
+  previousSwitchState = switchState;
 }
