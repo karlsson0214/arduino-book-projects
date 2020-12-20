@@ -27,8 +27,7 @@ void setup() {
 
   Serial.println("Arduino Uno");
   String text = "Arduino Uno";
-  Serial.println(text); 
-
+  Serial.println(text); // utskrift: Arduino Uno
 }
 
 void loop() {
