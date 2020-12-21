@@ -15,14 +15,13 @@ void loop() {
   // 8 bitar skickas vid ett anrop av funktionen write
   Serial.write(analogRead(A0)/4);
   /* 
+  // kod för felsökning
   for (int i = 0; i < 256; i = i + 8)
   {
     Serial.write(i);
     delay(300);
   }
   */
-
-  
 
   // pausa körningen i 1 millisekund
   // för att ADC Analog till Digital omvandlaren (eng. Converter)
