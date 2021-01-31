@@ -1,15 +1,9 @@
-int n[ 4 ] ; // n is an array of 10 integers
-// a = .-
-int a[2];
-char message[10] = "hej";
-
 void setup () {
   Serial.begin(9600);
+  
+  Serial.println("**************");
+  Serial.println("favorittal");
   Serial.println("--------------");
-
-  // ------------
-  // favorittal
-  // ------------
   // variabel med plats för 5 heltal
   // en variabel med plats för flera värden kallas vektor (eng. array)
   int favorittal [5]; 
@@ -21,7 +15,7 @@ void setup () {
   favorittal[3] = 7;
   favorittal[4] = 11;
 
-  Serial.println("Mina favorittal: ");
+  Serial.print("Mina favorittal: ");
   int index = 0;
   while (index < 5)
   {
@@ -31,21 +25,21 @@ void setup () {
   }
   Serial.println();
 
-  // ------------
-  // inköpslista
-  // ------------
-  String list [] = {"milk", "egg", "flour", "salt"};
+  Serial.println("**************");
+  Serial.println("inköpslista");
   Serial.println("--------------");
+  String list [] = {"milk", "egg", "flour", "salt"};
   Serial.println("buy: ");
   for (int i = 0; i < 4; i = i + 1)
   {
     Serial.println(list[i]);
   }
+
+
+  Serial.println("**************");
+  Serial.println("rövarspråk");
   Serial.println("--------------");
 
-  // ------------
-  // rövarspråk
-  // ------------
   //char message [3] = {'h', 'e', 'j'};
   // nedanstående rad ger samma vektor (eng. array) som raden ovan
   char message [3] = "hej";
@@ -70,11 +64,11 @@ void setup () {
     }
   }
   Serial.println();
-  Serial.println("--------------");
 
-  // ------------
-  // Yatzy
-  // ------------
+  
+  Serial.println("**************");
+  Serial.println("Yatzy");
+  Serial.println("--------------");
   // vektor (eng. array) med plats för 5 heltal
   int dice[5];
   for (int i = 0; i < 5; i = i + 1)
@@ -97,6 +91,7 @@ void setup () {
   }
   Serial.print("sum: ");
   Serial.println(sum);
+  Serial.println("**************");
   Serial.println("--------------");
 }
 
