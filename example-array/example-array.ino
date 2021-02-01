@@ -69,6 +69,9 @@ void setup () {
   Serial.println("**************");
   Serial.println("Yatzy");
   Serial.println("--------------");
+  // för att få nya slumptal när programmet körs en gång till
+  randomSeed(analogRead(A0));
+  
   // vektor (eng. array) med plats för 5 heltal
   int dice[5];
   for (int i = 0; i < 5; i = i + 1)
